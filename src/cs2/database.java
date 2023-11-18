@@ -63,7 +63,7 @@ public class database {
         File f = new File("persons.txt");
         FileWriter f1 = new FileWriter(f);
         BufferedWriter f2 = new BufferedWriter(f1);
-        f2.write(String.format("%-20s%-20s%-20s%-20s", "姓名", "年龄", "工作", "电话")); // 按指定宽度对齐
+        f2.write(String.format("%-20s%-20s%-20s%-20s", "姓名", "年龄", "电话", "编号")); // 按指定宽度对齐
         f2.newLine();
         f2.close();
         f1.close();

@@ -1,10 +1,15 @@
 package cs2;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("欢迎使用通讯录管理系统");
+        System.out.println("--------------------------------");
+        database d = new database();
+        d.systemInit();
+
         System.out.println("--------------------------------");
         System.out.println("您想要进行的操作是：");
         System.out.println("1 添加好友  2 删除好友  3 查找好友   4 修改好友信息   5 退出系统");
@@ -94,6 +99,8 @@ public class Client {
             else {
                 b = false;
             }
+
+            d.writePerson();
         }
     }
 }
